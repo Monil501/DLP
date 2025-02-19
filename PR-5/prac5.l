@@ -21,11 +21,9 @@ PUNCTUATION [;,.{}()\[\]]
 
 "/*"([^*]|\*+[^*/])*\*+"/" { printf("Comment: MULTI-LINE\n"); }
 
-
 [ \t\n]+      { /* Ignore */ }
 
-
-.             { printf("Lexical Error: %s\n", yytext); }
+. { printf("Lexical Error: %s\n", yytext); }
 
 %%
 
