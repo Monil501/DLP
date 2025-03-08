@@ -23,8 +23,12 @@ PUNCTUATION [;,.{}()\[\]]
 {PUNCTUATION}  { printf("Punctuation: %s\n", yytext); }
 "//".*         { printf("Comment: %s\n", yytext); }
 "/*"([^*]|\*+[^*/])*\*+"/" { printf("Comment: MULTI-LINE\n"); }
-[ \t\n]+       { /* Ignore whitespace */ }
-.              { printf("Lexical Error: %s\n", yytext); }
+
+
+[ \t\n]+      { /* Ignore */ }
+
+
+.             { printf("Lexical Error: %s\n", yytext); }
 
 %%
 
