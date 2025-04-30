@@ -282,11 +282,12 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 7
-#define YY_END_OF_BUFFER 8
-static yyconst short int yy_accept[11] =
+#define YY_NUM_RULES 4
+#define YY_END_OF_BUFFER 5
+static yyconst short int yy_accept[15] =
     {   0,
-        0,    0,    8,    5,    6,    4,    1,    3,    2,    0
+        0,    0,    5,    2,    3,    2,    0,    0,    0,    0,
+        0,    0,    1,    0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -294,17 +295,17 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    3,    3,    1,    1,    1,    1,
-        1,    3,    1,    3,    1,    1,    1,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    1,    3,    1,
-        1,    1,    1,    3,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        1,    1,    1,    1,    1,    1,    6,    6,    6,    6,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    3,    1,    4,    1,
 
-        6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
-        6,    6,    6,    6,    6,    6,    6,    6,    6,    6,
-        6,    6,    1,    3,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    5,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    6,    7,    8,    9,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -321,31 +322,35 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[7] =
+static yyconst int yy_meta[10] =
     {   0,
-        1,    1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1
     } ;
 
-static yyconst short int yy_base[11] =
+static yyconst short int yy_base[16] =
     {   0,
-        0,    0,    7,    8,    8,    8,    8,    8,    8,    8
+        0,    3,   15,   16,   16,    9,   10,    6,    2,    3,
+        6,    0,   16,   16,    0
     } ;
 
-static yyconst short int yy_def[11] =
+static yyconst short int yy_def[16] =
     {   0,
-       10,    1,   10,   10,   10,   10,   10,   10,   10,    0
+       15,   15,   14,   14,   14,   14,   14,   14,   14,   14,
+       14,   14,   14,    0,   14
     } ;
 
-static yyconst short int yy_nxt[15] =
+static yyconst short int yy_nxt[26] =
     {   0,
-        4,    5,    6,    7,    8,    9,   10,    3,   10,   10,
-       10,   10,   10,   10
+        4,    5,   14,    6,    5,   14,    6,   13,   12,   11,
+       10,    9,    8,    7,   14,    3,   14,   14,   14,   14,
+       14,   14,   14,   14,   14
     } ;
 
-static yyconst short int yy_chk[15] =
+static yyconst short int yy_chk[26] =
     {   0,
-        1,    1,    1,    1,    1,    1,    3,   10,   10,   10,
-       10,   10,   10,   10
+       15,    1,    0,    1,    2,    0,    2,   12,   11,   10,
+        9,    8,    7,    6,    3,   14,   14,   14,   14,   14,
+       14,   14,   14,   14,   14
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -359,13 +364,8 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "passwordValidation.l"
+#line 1 "charTOuni.l"
 #define INITIAL 0
-#line 2 "passwordValidation.l"
-    # include <stdbool.h>
-    int length = 0;
-    bool lowercase = false, uppercase = false, digit = false, symbols = false;
-    bool wrong_input = false;
 #line 370 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
@@ -517,7 +517,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 8 "passwordValidation.l"
+#line 1 "charTOuni.l"
 
 #line 523 "lex.yy.c"
 
@@ -570,13 +570,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 11 )
+				if ( yy_current_state >= 15 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 8 );
+		while ( yy_base[yy_current_state] != 16 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -604,40 +604,25 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "passwordValidation.l"
-{digit = true; ++length;}
+#line 2 "charTOuni.l"
+{printf("university");}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "passwordValidation.l"
-{lowercase = true; ++length;}
+#line 3 "charTOuni.l"
+{printf("%s",yytext);}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "passwordValidation.l"
-{uppercase = true; ++length;}
+#line 4 "charTOuni.l"
+{return 0;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "passwordValidation.l"
-{symbols = true; ++length;}
-	YY_BREAK
-case 5:
-YY_RULE_SETUP
-#line 13 "passwordValidation.l"
-{wrong_input = true; ++length;}
-	YY_BREAK
-case 6:
-YY_RULE_SETUP
-#line 14 "passwordValidation.l"
-return 0;
-	YY_BREAK
-case 7:
-YY_RULE_SETUP
-#line 15 "passwordValidation.l"
+#line 5 "charTOuni.l"
 ECHO;
 	YY_BREAK
-#line 641 "lex.yy.c"
+#line 626 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -929,7 +914,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 11 )
+			if ( yy_current_state >= 15 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -964,11 +949,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 11 )
+		if ( yy_current_state >= 15 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 10);
+	yy_is_jam = (yy_current_state == 14);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1523,27 +1508,11 @@ int main()
 	return 0;
 	}
 #endif
-#line 15 "passwordValidation.l"
+#line 5 "charTOuni.l"
 
 
 int yywrap(){}
 int main(int argc, char **argv){
     yylex();
-    if(wrong_input) {
-        printf("Invalid Password");
-    }
-    else{
-        if(length>=9 && length<=15){
-            if(lowercase && uppercase && digit && symbols){
-                printf("Password is valid");
-            }
-            else{
-                printf("Invalid Password");
-            }
-        }
-        else{
-            printf("Invalid Password");
-        }
-    }
     return 0;
 }
